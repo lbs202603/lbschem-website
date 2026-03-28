@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="正戊酸（Valeric Acid）- CAS 109-52-4，高纯度羧酸产品，广泛应用于香料、医药中间体、食品添加剂">
+    <meta name="keywords" content="正戊酸，Valeric Acid, CAS 109-52-4, 戊酸，羧酸，香料原料，医药中间体">
+    <title>正戊酸（Valeric Acid）- 宁波蓝宝石石油化工有限公司</title>
+    
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --primary-light: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --neutral-dark: #1f2937;
+            --neutral-gray: #6b7280;
+            --neutral-light: #f3f4f6;
+            --white: #ffffff;
+            --gradient-blue: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+            line-height: 1.7;
+            color: var(--neutral-dark);
+        }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        
+        /* 导航栏 */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--neutral-dark);
+            font-weight: 500;
+        }
+
+        /* 产品详情 */
+        .product-hero {
+            padding: 160px 0 80px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .product-image {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 60px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .product-image-placeholder {
+            font-size: 8rem;
+            margin-bottom: 24px;
+        }
+
+        .product-info h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--primary-blue);
+        }
+
+        .product-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .meta-tag {
+            background: #e0f2fe;
+            color: var(--primary-blue);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .product-section {
+            margin-bottom: 32px;
+        }
+
+        .product-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--neutral-dark);
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .specs-table tr:nth-child(even) {
+            background: var(--neutral-light);
+        }
+
+        .specs-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .specs-table td:first-child {
+            font-weight: 600;
+            color: var(--neutral-gray);
+            width: 40%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gradient-blue);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(30, 64, 175, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
+        }
+
+        /* 相关产品 */
+        .related-products {
+            padding: 80px 0;
+            background: var(--neutral-light);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .product-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .product-card p {
+            color: var(--neutral-gray);
+            font-size: 0.875rem;
+        }
+
+        /* 页脚 */
+        footer {
+            background: var(--neutral-dark);
+            color: #9ca3af;
+            padding: 60px 0 30px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .product-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "正戊酸",
+        "alternateName": "Valeric Acid",
+        "description": "高纯度正戊酸，CAS 109-52-4，广泛应用于香料、医药中间体、食品添加剂",
+        "brand": {
+            "@type": "Brand",
+            "name": "德国欧季亚 OXEA"
+        },
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "宁波蓝宝石石油化工有限公司"
+            }
+        },
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "name": "CAS 号",
+                "value": "109-52-4"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "分子式",
+                "value": "C5H10O2"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "纯度",
+                "value": "≥99.5%"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">LBS Chemical | 蓝宝石化工</a>
+            <ul class="nav-links">
+                <li><a href="/#home">首页</a></li>
+                <li><a href="/#about">关于我们</a></li>
+                <li><a href="/#products">产品中心</a></li>
+                <li><a href="/#network">服务网络</a></li>
+                <li><a href="/#contact">联系我们</a></li>
+            </ul>
+            <a href="/#contact" class="btn btn-primary">立即咨询</a>
+        </nav>
+    </header>
+
+    <section class="product-hero">
+        <div class="container">
+            <div class="product-grid">
+                <div class="product-image">
+                    <div class="product-image-placeholder">🧪</div>
+                    <p style="color: var(--neutral-gray);">正戊酸（Valeric Acid）</p>
+                    <p style="color: var(--neutral-gray); font-size: 0.875rem; margin-top: 8px;">CAS: 109-52-4</p>
+                </div>
+                <div class="product-info">
+                    <h1>正戊酸</h1>
+                    <p style="font-size: 1.125rem; color: var(--neutral-gray); margin-bottom: 24px;">Valeric Acid / Pentanoic Acid</p>
+                    
+                    <div class="product-meta">
+                        <span class="meta-tag">CAS 109-52-4</span>
+                        <span class="meta-tag">≥99.5% 纯度</span>
+                        <span class="meta-tag">欧洲进口</span>
+                        <span class="meta-tag">食品级</span>
+                    </div>
+
+                    <p style="margin-bottom: 32px; line-height: 1.8;">
+                        高纯度正戊酸，源自德国欧季亚（OXEA）原装进口，广泛应用于香料合成、医药中间体、食品添加剂等领域。
+                        我们在宁波、上海、广州等七大港口设有仓库，现货供应，快速发货。
+                    </p>
+
+                    <div style="display: flex; gap: 16px;">
+                        <a href="/#contact" class="btn btn-primary">获取报价</a>
+                        <a href="tel:0574-88332597" class="btn" style="background: var(--white); color: var(--primary-blue);">电话咨询</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div class="product-section">
+                <h2>产品规格</h2>
+                <table class="specs-table">
+                    <tr>
+                        <td>产品名称</td>
+                        <td>正戊酸 / Valeric Acid</td>
+                    </tr>
+                    <tr>
+                        <td>CAS 号</td>
+                        <td>109-52-4</td>
+                    </tr>
+                    <tr>
+                        <td>分子式</td>
+                        <td>C₅H₁₀O₂</td>
+                    </tr>
+                    <tr>
+                        <td>分子量</td>
+                        <td>102.13 g/mol</td>
+                    </tr>
+                    <tr>
+                        <td>纯度</td>
+                        <td>≥99.5%</td>
+                    </tr>
+                    <tr>
+                        <td>外观</td>
+                        <td>无色透明液体</td>
+                    </tr>
+                    <tr>
+                        <td>沸点</td>
+                        <td>186°C</td>
+                    </tr>
+                    <tr>
+                        <td>熔点</td>
+                        <td>-34.5°C</td>
+                    </tr>
+                    <tr>
+                        <td>密度</td>
+                        <td>0.939 g/cm³ (25°C)</td>
+                    </tr>
+                    <tr>
+                        <td>原产地</td>
+                        <td>德国</td>
+                    </tr>
+                    <tr>
+                        <td>包装规格</td>
+                        <td>180kg/桶，ISO Tank</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="product-section" style="margin-top: 60px;">
+                <h2>应用领域</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                    <div style="background: var(--neutral-light); padding: 20px; border-radius: 12px;">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">💊</div>
+                        <strong>医药中间体</strong>
+                        <p style="color: var(--neutral-gray); font-size: 0.875rem; margin-top: 8px;">合成药物的重要原料</p>
+                    </div>
+                    <div style="background: var(--neutral-light); padding: 20px; border-radius: 12px;">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">🌸</div>
+                        <strong>香精香料</strong>
+                        <p style="color: var(--neutral-gray); font-size: 0.875rem; margin-top: 8px;">水果香型香料合成</p>
+                    </div>
+                    <div style="background: var(--neutral-light); padding: 20px; border-radius: 12px;">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">🍽️</div>
+                        <strong>食品添加剂</strong>
+                        <p style="color: var(--neutral-gray); font-size: 0.875rem; margin-top: 8px;">食用香料、防腐剂</p>
+                    </div>
+                    <div style="background: var(--neutral-light); padding: 20px; border-radius: 12px;">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">🧪</div>
+                        <strong>有机合成</strong>
+                        <p style="color: var(--neutral-gray); font-size: 0.875rem; margin-top: 8px;">酯类、酰胺类合成</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-section" style="margin-top: 60px;">
+                <h2>产品优势</h2>
+                <ul style="list-style: none; display: grid; gap: 16px;">
+                    <li style="display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: var(--primary-blue); font-weight: 700;">✓</span>
+                        <div>
+                            <strong>欧洲原装进口</strong>
+                            <p style="color: var(--neutral-gray);">德国欧季亚（OXEA）原厂生产，品质保证</p>
+                        </div>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: var(--primary-blue); font-weight: 700;">✓</span>
+                        <div>
+                            <strong>高纯度标准</strong>
+                            <p style="color: var(--neutral-gray);">纯度≥99.5%，满足高端应用需求</p>
+                        </div>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: var(--primary-blue); font-weight: 700;">✓</span>
+                        <div>
+                            <strong>现货供应</strong>
+                            <p style="color: var(--neutral-gray);">七大港口仓库，就近发货，快速配送</p>
+                        </div>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: var(--primary-blue); font-weight: 700;">✓</span>
+                        <div>
+                            <strong>技术支持</strong>
+                            <p style="color: var(--neutral-gray);">专业团队提供应用技术支持和解决方案</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-products">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">相关产品</h2>
+            <div class="products-grid">
+                <a href="/product/pentanol.html" class="product-card" style="text-decoration: none; color: inherit;">
+                    <h3>正戊醇</h3>
+                    <p>CAS: 71-41-0 | ≥99.99%</p>
+                </a>
+                <a href="/product/isovaleraldehyde.html" class="product-card" style="text-decoration: none; color: inherit;">
+                    <h3>异戊醛</h3>
+                    <p>CAS: 590-86-3 | 高纯度</p>
+                </a>
+                <a href="/product/heptanoic-acid.html" class="product-card" style="text-decoration: none; color: inherit;">
+                    <h3>正庚酸</h3>
+                    <p>CAS: 111-14-8 | 欧洲进口</p>
+                </a>
+                <a href="/product/nonanoic-acid.html" class="product-card" style="text-decoration: none; color: inherit;">
+                    <h3>正壬酸</h3>
+                    <p>CAS: 112-05-0 | 食品级</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h3 style="color: var(--white); margin-bottom: 16px;">需要产品咨询？</h3>
+                <p style="color: #9ca3af; margin-bottom: 24px;">我们的专业团队随时为您服务</p>
+                <a href="/#contact" class="btn btn-primary">立即联系</a>
+            </div>
+            <div class="footer-bottom">
+                <p>版权所有 © 2016-2026 宁波蓝宝石石油化工有限公司 | 浙 ICP 备 16012839 号</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

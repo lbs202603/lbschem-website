@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="宁波蓝宝石石油化工有限公司 - 专业精细化学品供应商，进口壬二酸、陶氏正戊酸、99.99%正戊醇、异戊醛等产品">
+    <meta name="keywords" content="进口壬二酸，陶氏正戊酸，正戊醇，异戊醛，异戊醇，正庚酸，正壬酸，三甘醇，蓝宝石化工，LBS Chemical">
+    <title>宁波蓝宝石石油化工有限公司 - 进口壬二酸、陶氏正戊酸、99.99%正戊醇、异戊醛</title>
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --accent: #06b6d4;
+            --dark: #1f2937;
+            --gray: #6b7280;
+            --light: #f3f4f6;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; line-height: 1.8; color: var(--dark); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Header */
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .top-bar { background: var(--primary); color: var(--white); padding: 8px 0; font-size: 14px; }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); }
+        .menu { display: flex; gap: 30px; list-style: none; }
+        .menu a { font-weight: 500; transition: color 0.3s; }
+        .menu a:hover { color: var(--primary-light); }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 150px 0 80px; text-align: center; }
+        .hero h1 { font-size: 42px; margin-bottom: 20px; color: var(--primary); }
+        .hero p { font-size: 18px; color: var(--gray); max-width: 800px; margin: 0 auto 30px; }
+        .search-box { max-width: 600px; margin: 30px auto; display: flex; gap: 10px; }
+        .search-box input { flex: 1; padding: 15px 20px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; }
+        .search-box button { padding: 15px 30px; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; }
+        
+        /* Stats */
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 60px; }
+        .stat { text-align: center; }
+        .stat-num { font-size: 36px; font-weight: bold; color: var(--primary); }
+        .stat-label { color: var(--gray); margin-top: 8px; }
+        
+        /* About */
+        .section { padding: 80px 0; }
+        .section-title { font-size: 32px; text-align: center; margin-bottom: 50px; color: var(--primary); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-text h3 { font-size: 24px; margin-bottom: 20px; }
+        .about-text p { color: var(--gray); margin-bottom: 15px; text-align: justify; }
+        .about-img { background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%); border-radius: 16px; padding: 60px; text-align: center; font-size: 80px; }
+        
+        /* Products */
+        .products { background: var(--light); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .product-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-card h3 { color: var(--primary); margin-bottom: 12px; font-size: 20px; }
+        .product-card p { color: var(--gray); font-size: 14px; margin-bottom: 15px; }
+        .product-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { background: #e0f2fe; color: var(--primary); padding: 4px 12px; border-radius: 15px; font-size: 12px; }
+        
+        /* Partners */
+        .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 30px; align-items: center; }
+        .partner { background: var(--light); padding: 20px; border-radius: 8px; text-align: center; font-weight: 500; color: var(--gray); }
+        
+        /* Network */
+        .network-list { list-style: none; }
+        .network-list li { padding: 12px 0; border-bottom: 1px solid var(--light); display: flex; align-items: center; gap: 10px; }
+        .network-list li::before { content: "✓"; color: var(--primary); font-weight: bold; }
+        
+        /* Industries */
+        .industries { background: var(--dark); color: white; }
+        .industries .section-title { color: white; }
+        .industry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+        .industry-item { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; text-align: center; }
+        .industry-icon { font-size: 32px; margin-bottom: 10px; }
+        
+        /* Contact */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .contact-info h3 { margin-bottom: 20px; }
+        .contact-item { display: flex; gap: 15px; margin-bottom: 20px; }
+        .contact-icon { font-size: 24px; }
+        .contact-form { background: var(--light); padding: 30px; border-radius: 12px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; }
+        .contact-form button { width: 100%; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; }
+        
+        /* Footer */
+        footer { background: var(--dark); color: #9ca3af; padding: 50px 0 20px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 30px; }
+        .footer-section h4 { color: white; margin-bottom: 15px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu { display: none; }
+            .hero h1 { font-size: 28px; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .about-content, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <span>欢迎光临宁波蓝宝石石油化工有限公司官方网站！</span>
+                <span>📞 0574-88332597 | 📧 lbs@lbschem.com</span>
+            </div>
+        </div>
+        <div class="container nav">
+            <a href="#" class="logo">LBS Chemical | 蓝宝石化工</a>
+            <ul class="menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#products">产品中心</a></li>
+                <li><a href="#partners">合作伙伴</a></li>
+                <li><a href="#network">服务网络</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>进口壬二酸、陶氏正戊酸、99.99%正戊醇、异戊醛</h1>
+            <p>宁波蓝宝石石油化工有限公司是一家专业从事精细化学品供应的服务商，主要代理美国陶氏化学（DOW）、德国欧季亚（OXEA）、德国英力士 (INEOS) 等全球知名企业的化学产品</p>
+            <div class="search-box">
+                <input type="text" placeholder="请输入你要搜索的产品名称或 CAS 号">
+                <button>🔍 搜索</button>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-num">8+</div>
+                    <div class="stat-label">全球合作品牌</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">7</div>
+                    <div class="stat-label">港口仓库</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">10+</div>
+                    <div class="stat-label">服务行业</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">24h</div>
+                    <div class="stat-label">快速响应</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">关于我们 / ABOUT US</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>我们是一家专业从事精细化学品供应的服务商</h3>
+                    <p>主要代理美国陶氏化学（DOW）、德国欧季亚（OXEA）、德国英力士 (INEOS)、意大利木蕊科 (Matrica)、韩国 SK、日本大赛璐（DAICEL）、马来西亚 KLK OLEO、印尼春金（Musim Mas) 等全球知名企业的化学产品，服务各行业客户，并且具备向国外输出优势产品的能力。</p>
+                    <p>我们在宁波、上海、南京、青岛、天津、大连、广州都设有靠港码头和仓库，能够就近发货方便服务周边客户。</p>
+                    <p>我们服务的客户群体涵盖：医药、农化、动物营养、日化、液晶中间体、润滑油、涂料、食品添加剂、香精香料、电子化学品等领域。</p>
+                    <p><strong>我们的定位：</strong>做好全球优秀产品与终端用户间的纽带和桥梁。真诚希望与全球各界朋友精诚合作，互相成就。</p>
+                </div>
+                <div class="about-img">🏢</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section products" id="products">
+        <div class="container">
+            <h2 class="section-title">产品中心 / PRODUCTS</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>🧪 羧酸类产品</h3>
+                    <p>正戊酸、正庚酸、正壬酸、辛酸、己酸、异壬酸等</p>
+                    <div class="product-tags">
+                        <span class="tag">CAS 认证</span>
+                        <span class="tag">欧洲进口</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <h3>💧 醇类产品</h3>
+                    <p>正戊醇 (99.99%)、异戊醇、三甘醇、三丙二醇等</p>
+                    <div class="product-tags">
+                        <span class="tag">高纯度</span>
+                        <span class="tag">99.99%</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <h3>⚗️ 醛酮类产品</h3>
+                    <p>异戊醛、正戊醛、环戊酮等精细化工中间体</p>
+                    <div class="product-tags">
+                        <span class="tag">医药级</span>
+                        <span class="tag">工业级</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <h3>🌿 营养添加剂</h3>
+                    <p>壬二酸等，用于化妆品、医药、食品添加剂</p>
+                    <div class="product-tags">
+                        <span class="tag">食品级</span>
+                        <span class="tag">化妆品级</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <h3>🔬 日化原料</h3>
+                    <p>表面活性剂、乳化剂、增稠剂等日化专用化学品</p>
+                    <div class="product-tags">
+                        <span class="tag">天然来源</span>
+                        <span class="tag">环保</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <h3>📦 出口产品</h3>
+                    <p>具备向国外输出优势产品的能力，服务全球客户</p>
+                    <div class="product-tags">
+                        <span class="tag">国际贸易</span>
+                        <span class="tag">海关认证</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="partners">
+        <div class="container">
+            <h2 class="section-title">全球合作伙伴 / PARTNERS</h2>
+            <div class="partners-grid">
+                <div class="partner">美国陶氏 DOW</div>
+                <div class="partner">德国欧季亚 OXEA</div>
+                <div class="partner">德国英力士 INEOS</div>
+                <div class="partner">意大利 Matrica</div>
+                <div class="partner">韩国 SK</div>
+                <div class="partner">日本大赛璐 DAICEL</div>
+                <div class="partner">马来西亚 KLK</div>
+                <div class="partner">印尼春金 Musim Mas</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="network">
+        <div class="container">
+            <h2 class="section-title">全国服务网络 / NETWORK</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                <div>
+                    <p style="margin-bottom: 20px; color: var(--gray);">我们在全国七大港口设有靠港码头和仓库，能够就近发货方便服务周边客户</p>
+                    <ul class="network-list">
+                        <li><strong>宁波</strong> - 总部基地，主要仓储中心</li>
+                        <li><strong>上海</strong> - 华东配送中心</li>
+                        <li><strong>南京</strong> - 江苏服务网点</li>
+                        <li><strong>青岛</strong> - 华北仓储基地</li>
+                        <li><strong>天津</strong> - 京津冀配送中心</li>
+                        <li><strong>大连</strong> - 东北服务网点</li>
+                        <li><strong>广州</strong> - 华南配送中心</li>
+                    </ul>
+                </div>
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%); border-radius: 16px; padding: 60px; text-align: center; font-size: 80px;">🗺️</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section industries" id="industries">
+        <div class="container">
+            <h2 class="section-title">服务行业 / INDUSTRIES</h2>
+            <div class="industry-grid">
+                <div class="industry-item"><div class="industry-icon">💊</div><div>医药</div></div>
+                <div class="industry-item"><div class="industry-icon">🌾</div><div>农化</div></div>
+                <div class="industry-item"><div class="industry-icon">🐾</div><div>动物营养</div></div>
+                <div class="industry-item"><div class="industry-icon">🧴</div><div>日化</div></div>
+                <div class="industry-item"><div class="industry-icon">📺</div><div>液晶中间体</div></div>
+                <div class="industry-item"><div class="industry-icon">⚙️</div><div>润滑油</div></div>
+                <div class="industry-item"><div class="industry-icon">🎨</div><div>涂料</div></div>
+                <div class="industry-item"><div class="industry-icon">🍽️</div><div>食品添加剂</div></div>
+                <div class="industry-item"><div class="industry-icon">🌸</div><div>香精香料</div></div>
+                <div class="industry-item"><div class="industry-icon">💻</div><div>电子化学品</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们 / CONTACT</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>宁波蓝宝石石油化工有限公司</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>地址：</strong>
+                            <p>浙江省宁波高新区新梅路 518 号奥创中心 A 幢 1604 室</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>电话：</strong>
+                            <p>0574-88332597</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📠</div>
+                        <div>
+                            <strong>传真：</strong>
+                            <p>0574-88330798</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>邮箱：</strong>
+                            <p>lbs@lbschem.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🛒</div>
+                        <div>
+                            <strong>阿里巴巴商城：</strong>
+                            <p><a href="https://shop4098xo3096590.1688.com" target="_blank" style="color: var(--primary);">https://shop4098xo3096590.1688.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 20px;">快速咨询</h3>
+                    <form>
+                        <input type="text" placeholder="您的姓名" required>
+                        <input type="email" placeholder="邮箱地址" required>
+                        <input type="tel" placeholder="联系电话">
+                        <input type="text" placeholder="产品名称或 CAS 号">
+                        <textarea rows="4" placeholder="咨询内容" required></textarea>
+                        <button type="submit">提交咨询</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>宁波蓝宝石石油化工有限公司</h4>
+                    <p>专业精细化学品供应服务商，代理全球知名化工品牌，服务医药、农化、日化等行业</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#products">产品中心</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>产品中心</h4>
+                    <ul class="footer-links">
+                        <li><a href="#products">羧酸类</a></li>
+                        <li><a href="#products">醇类</a></li>
+                        <li><a href="#products">醛酮类</a></li>
+                        <li><a href="#products">营养添加剂</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>版权所有 © 2016-2026 宁波蓝宝石石油化工有限公司 | 浙 ICP 备 16012839 号</p>
+                <p>网络支持：中国化工网 | 全球化工网 | 生意宝</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
